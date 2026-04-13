@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rayanul Kader Chowdhury Abid – Full-Stack Software Engineer &amp; AI Enthusiast. Portfolio showcasing experience, projects, and skills." />
+  <title>Rayanul Kader Chowdhury Abid | Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#experience"   class="nav-link">Experience</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#contact"      class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, World! &#x1F44B;</p>
+      <h1 class="hero-name">Rayanul Kader<br /><span class="gradient-text">Chowdhury Abid</span></h1>
+      <div class="hero-title-wrap">
+        <span class="hero-title-prefix">I am a </span>
+        <span id="typedText" class="hero-typed"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Chittagong, Bangladesh
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="mailto:2162.rayanul.kader.chowdhury@gmail.com" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/rayan2162" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/rayanul-kader-chowdhury" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:2162.rayanul.kader.chowdhury@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Get To Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar-wrap fade-up">
+          <div class="about-avatar">
+            <div class="avatar-initials">RKC</div>
+            <div class="avatar-ring ring1"></div>
+            <div class="avatar-ring ring2"></div>
+          </div>
+          <div class="about-contact-card">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+880 1641-309424</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>2162.rayanul.kader.chowdhury@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Nirvana R/A, Goni Bekary Circle, Chittagong</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text fade-up">
+          <p class="about-summary">Highly motivated <strong>Software Engineer</strong> with strong expertise in full-stack development and AI-driven systems, specializing in scalable web applications and intelligent backend services.</p>
+          <p class="about-summary">Experienced in building enterprise-grade <strong>ERP modules</strong>, RESTful architectures, and machine learning integrations. Proven ability to deliver efficient, production-ready solutions that enhance system performance and streamline organizational workflows.</p>
+          <div class="about-stats">
+            <div class="stat-card"><span class="stat-number">1+</span><span class="stat-label">Year Experience</span></div>
+            <div class="stat-card"><span class="stat-number">6+</span><span class="stat-label">Projects</span></div>
+            <div class="stat-card"><span class="stat-number">500+</span><span class="stat-label">Conference Users</span></div>
+            <div class="stat-card"><span class="stat-number">3.42</span><span class="stat-label">CGPA</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Software Development Trainee</h3>
+                <p class="timeline-org">Premier University Chittagong &mdash; IT Department, Software Section</p>
+              </div>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Dec 2025 &ndash; Jun 2026 &nbsp;&middot;&nbsp; 6 Months
+            </p>
+            <ul class="timeline-list">
+              <li>Contributed to a comprehensive university <strong>ERP system</strong>, improving operational efficiency and digitizing core academic processes.</li>
+              <li>Engineered <strong>Session Management</strong>, <strong>Student Information</strong>, and <strong>CO-PO based Exam Marks</strong> systems.</li>
+              <li>Designed a <strong>Transcript Generation System</strong> reducing manual workload through automation.</li>
+              <li>Collaborated with backend engineers to refine REST API structures and improve data integrity.</li>
+              <li>Optimized API communication, reducing payload size for faster response times and lower server load.</li>
+              <li>Participated in sprint planning via <strong>ClickUp</strong>, ensuring timely delivery of features.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Axios</span>
+              <span class="tag">JWT</span><span class="tag">Bootstrap</span><span class="tag">Tailwind</span>
+              <span class="tag">Postman</span><span class="tag">Git</span><span class="tag">ClickUp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Web Developer <span class="timeline-type">Contract-Based</span></h3>
+                <p class="timeline-org">24th International Mathematics Conference &mdash; Bangladesh Mathematical Society &amp; University of Chittagong</p>
+              </div>
+            </div>
+            <p class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Jul 2025 &ndash; Dec 2025 &nbsp;&middot;&nbsp; 6 Months
+            </p>
+            <ul class="timeline-list">
+              <li>Developed a fully responsive production-grade web platform used by <strong>500+ participants</strong>.</li>
+              <li>Implemented <strong>pre-registration</strong>, paper submission, and participant registration systems.</li>
+              <li>Built a secure <strong>ticketing and payment verification system</strong>.</li>
+              <li>Designed an <strong>admin dashboard</strong> for managing submissions and exporting participant data.</li>
+              <li>Delivered real-time technical support during critical conference operations.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag">Laravel 10</span><span class="tag">Bootstrap</span>
+              <span class="tag">LaravelUI</span><span class="tag">DomPDF</span><span class="tag">cPanel</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid fade-up">
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3 class="skill-cat-title">Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">JavaScript</span><span class="skill-pill">PHP</span>
+            <span class="skill-pill">Python</span><span class="skill-pill">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">HTML</span><span class="skill-pill">CSS</span><span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">Tailwind CSS</span><span class="skill-pill">React.js</span>
+            <span class="skill-pill">Blade</span><span class="skill-pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <h3 class="skill-cat-title">Backend</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Laravel</span><span class="skill-pill">Express.js</span>
+            <span class="skill-pill">FastAPI</span><span class="skill-pill">Node.js</span>
+            <span class="skill-pill">REST API</span><span class="skill-pill">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <h3 class="skill-cat-title">Database</h3>
+          <div class="skill-pills"><span class="skill-pill">MySQL</span></div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3 class="skill-cat-title">Tools &amp; DevOps</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Docker</span><span class="skill-pill">Linux (Debian/Arch)</span>
+            <span class="skill-pill">Nginx</span><span class="skill-pill">cPanel</span>
+            <span class="skill-pill">Git</span><span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Bash</span><span class="skill-pill">ClickUp</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h3 class="skill-cat-title">Core Competencies</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Communication</span><span class="skill-pill">Leadership</span>
+            <span class="skill-pill">Teamwork</span><span class="skill-pill">Problem-Solving</span>
+            <span class="skill-pill">Under Pressure</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F3AC;</div>
+            <a href="https://github.com/rayan2162/Cinema_Palace_Movie_Recommendation_System" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">Cinema Palace</h3>
+          <p class="project-subtitle">AI Movie Recommendation Website</p>
+          <p class="project-desc">Modular AI-powered movie recommendation system with OMDB API for real-time search, session-based preference tracking, and REST microservice communication.</p>
+          <div class="tech-tags"><span class="tag">Laravel</span><span class="tag">FastAPI</span><span class="tag">TF-IDF</span><span class="tag">OMDB API</span><span class="tag">Tailwind CSS</span></div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F916;</div>
+            <a href="https://github.com/rayan2162/Ai_Movie_Recommendation_API" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">AI Movie Recommendation API</h3>
+          <p class="project-subtitle">High-Performance REST API</p>
+          <p class="project-desc">High-performance FastAPI service for content-based movie recommendations using TF-IDF and cosine similarity, with robust fallback logic and full CORS support.</p>
+          <div class="tech-tags"><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">TF-IDF</span><span class="tag">ML</span><span class="tag">Cosine Similarity</span></div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F33E;</div>
+            <a href="https://github.com/rayan2162/smart_farmer_assistance_app" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">Smart Farmer Assistant App</h3>
+          <p class="project-subtitle">Agricultural Management System</p>
+          <p class="project-desc">Role-based agricultural management system with modules for crops, livestock, agroforestry, silos, and equipment tracking, featuring real-time weather API and SMTP notifications.</p>
+          <div class="tech-tags"><span class="tag">Laravel</span><span class="tag">Bootstrap</span><span class="tag">MySQL</span><span class="tag">Weather API</span><span class="tag">SMTP</span></div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F393;</div>
+            <a href="https://github.com/rayan2162/24imc" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">24th IMC Conference System</h3>
+          <p class="project-subtitle">International Conference Platform</p>
+          <p class="project-desc">Production-grade conference web platform for 500+ participants with registration, paper submission, ticketing, payment verification, and a full admin dashboard.</p>
+          <div class="tech-tags"><span class="tag">Laravel 10</span><span class="tag">Bootstrap</span><span class="tag">DomPDF</span><span class="tag">LaravelUI</span><span class="tag">cPanel</span></div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F4C5;</div>
+            <a href="https://github.com/rayan2162/my-day-management-app" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">My Day Management App</h3>
+          <p class="project-subtitle">Productivity &amp; Planning Tool</p>
+          <p class="project-desc">Minimalist productivity tool with to-do lists, habit tracking, notes, prioritization, Pomodoro timer, and goal tracking &mdash; offline-friendly and blazing fast.</p>
+          <div class="tech-tags"><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">LocalStorage</span></div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-card-top">
+            <div class="project-icon">&#x1F9E0;</div>
+            <a href="https://github.com/rayan2162/extractive_text_summarization_using_TF-IDF" target="_blank" rel="noopener" aria-label="GitHub" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">Extractive Text Summarization</h3>
+          <p class="project-subtitle">AI &amp; NLP Lab Project</p>
+          <p class="project-desc">NLP project implementing extractive text summarization with TF-IDF weighting and web scraping for content extraction. AI Laboratory course project (6th semester).</p>
+          <div class="tech-tags"><span class="tag">Python</span><span class="tag">TF-IDF</span><span class="tag">NLP</span><span class="tag">Web Scraping</span><span class="tag">Jupyter</span></div>
+        </div>
+
+      </div>
+      <div class="projects-cta fade-up">
+        <a href="https://github.com/rayan2162" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="flex-shrink:0"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Recognition</span>
+        <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card fade-up">
+          <div class="achievement-medal">&#x1F947;</div>
+          <div class="achievement-body">
+            <h3 class="achievement-title">1st Position &mdash; IT Quiz</h3>
+            <p class="achievement-event">Premier University IT Fest 2024</p>
+            <p class="achievement-desc">Achieved top position in senior category (5th&ndash;8th semester students) in the IT Quiz competition at Premier University IT Fest 2024.</p>
+          </div>
+        </div>
+        <div class="achievement-card fade-up">
+          <div class="achievement-medal">&#x1F3C6;</div>
+          <div class="achievement-body">
+            <h3 class="achievement-title">Final Round &mdash; Top 30 Teams (9th Nationwide)</h3>
+            <p class="achievement-event">Televerse 1.0 Hackathon &mdash; CUET</p>
+            <p class="achievement-desc">Ranked 9th nationwide in an intensive 8-hour hackathon focused on microservice architecture.</p>
+            <ul class="achievement-list">
+              <li>Built a complete microservice-based system under time constraints</li>
+              <li>Gained hands-on experience in Docker, CI/CD, and DevOps practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">B.Sc in Computer Science &amp; Engineering</h3>
+                <p class="timeline-org">Premier University, Chittagong</p>
+              </div>
+              <span class="timeline-badge">CGPA 3.42</span>
+            </div>
+            <p class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              2021 &ndash; 2025 &nbsp;&middot;&nbsp; Thesis Ongoing
+            </p>
+            <p class="timeline-coursework"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, OOP, Database Systems, Software Engineering, Machine Learning, Neural Networks, Computer Networks (CISCO), Operating Systems</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">HSC (Science)</h3>
+                <p class="timeline-org">Hazera Taju Degree College</p>
+              </div>
+              <span class="timeline-badge">GPA 4.00</span>
+            </div>
+            <p class="timeline-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              2017 &ndash; 2019
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-subheader fade-up">
+        <h3 class="section-subtitle">Co-Curricular <span class="gradient-text">Activities</span></h3>
+      </div>
+      <div class="cocurricular-grid">
+        <div class="cocurricular-card fade-up">
+          <div class="cocurricular-icon">&#x1F4BB;</div>
+          <div class="cocurricular-body">
+            <h4 class="cocurricular-title">President &amp; Vice President</h4>
+            <p class="cocurricular-org">Premier University Computer Club</p>
+            <p class="cocurricular-role">President (Fall 2025) &middot; Vice President (Spring 2024)</p>
+            <p class="cocurricular-desc">Led technical initiatives, workshops, and events to foster a strong developer community. Coordinated cross-functional teams and mentored junior members.</p>
+          </div>
+        </div>
+        <div class="cocurricular-card fade-up">
+          <div class="cocurricular-icon">&#x26A1;</div>
+          <div class="cocurricular-body">
+            <h4 class="cocurricular-title">Vice Chair</h4>
+            <p class="cocurricular-org">IEEE Computer Society &mdash; Premier University Student Branch Chapter</p>
+            <p class="cocurricular-role">Ex-Com 2025</p>
+            <p class="cocurricular-desc">Organized technical events, seminars, and collaborative programs. Strengthened leadership, communication, and team management capabilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid fade-up">
+        <div class="contact-info">
+          <p class="contact-intro">I'm currently open to new opportunities. Whether you have a project idea, a job offer, or just want to say hi &mdash; feel free to reach out!</p>
+          <div class="contact-details">
+            <a href="mailto:2162.rayanul.kader.chowdhury@gmail.com" class="contact-detail-item">
+              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><span class="contact-detail-label">Email</span><span class="contact-detail-value">2162.rayanul.kader.chowdhury@gmail.com</span></div>
+            </a>
+            <a href="tel:+8801641309424" class="contact-detail-item">
+              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><span class="contact-detail-label">Phone</span><span class="contact-detail-value">+880 1641-309424</span></div>
+            </a>
+            <a href="https://linkedin.com/in/rayanul-kader-chowdhury" target="_blank" rel="noopener" class="contact-detail-item">
+              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <div><span class="contact-detail-label">LinkedIn</span><span class="contact-detail-value">rayanul-kader-chowdhury</span></div>
+            </a>
+            <a href="https://github.com/rayan2162" target="_blank" rel="noopener" class="contact-detail-item">
+              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div><span class="contact-detail-label">GitHub</span><span class="contact-detail-value">rayan2162</span></div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo"><span class="logo-bracket">&lt;</span>Rayan<span class="logo-bracket">/&gt;</span></a>
+        <p class="footer-copy">Designed &amp; Built by <strong>Rayanul Kader Chowdhury Abid</strong></p>
+        <div class="footer-socials">
+          <a href="https://github.com/rayan2162" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon social-icon-sm">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/rayanul-kader-chowdhury" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon social-icon-sm">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
